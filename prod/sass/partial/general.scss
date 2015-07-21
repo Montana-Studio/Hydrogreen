@@ -1,0 +1,89 @@
+html {
+	height: 100%;
+	width: 100%;
+	body{
+		height: 100%;
+		width: 100%;
+		@extend .no-margins;
+	}
+}
+.text-center{
+	text-align: center;
+}
+.text-left{
+	text-align: left;
+}
+.text-right{
+	text-align: right;
+}
+.no-margins{
+	margin:0 !important;
+}
+.no-paddings{
+	padding:0 !important;
+}
+.resp_img{
+	width:100%;
+	height:auto;
+}
+.center{
+	margin:0 auto !important;
+}
+a {
+	text:{decoration:none;}
+}
+
+$color_first:#fff;
+$color_font:#2c87ca;
+$primary_font:'Open Sans', sans-serif;
+
+//MEDIA QUERIES
+$bp-smalless : 320px;
+$bp-meddies : 480px;
+$bp-md  : 600px;
+$bp-large : 800px; 
+$bp-largess : 1024px;
+$bp-xl : 1140px;
+$bp-xxl : 1440px;
+
+//MEDIA QUERIES
+$bp-smalless : 320px;
+$bp-meddies : 480px;
+$bp-md  : 600px;
+$bp-large : 800px;
+$bp-largess : 1024px;
+$bp-xl : 1140px;
+$bp-xxl : 1440px;
+
+//MOBILE FIRST
+@include gridle_register_state( phoness-min, (
+	(screen and (min-width : $bp-smalless) and (max-width:$bp-meddies))
+) );
+
+@include gridle_register_state( phoness, (
+	(max-width : $bp-large)
+) );
+
+@include gridle_register_state( tabless-md, (
+	(min-width : $bp-md) and (max-width:$bp-largess)
+) );
+
+@include gridle_register_state( tabless-md-portrait, (
+	(screen and (min-width : $bp-md) and (max-width: $bp-large)and (orientation : portrait))
+) );
+
+@include gridle_register_state( tabless-min, (
+	(min-width : $bp-large) and (max-width:$bp-largess)
+) );
+
+@include gridle_register_state( tabless, (
+	(min-width : $bp-largess)
+) );
+
+@include gridle_register_state( notebook-min, (
+	(min-width : $bp-xl) and (max-width:$bp-xxl)
+) );
+
+@include gridle_register_state( desktopess, (
+	(min-width : $bp-xxl)
+) );

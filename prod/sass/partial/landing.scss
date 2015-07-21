@@ -1,0 +1,136 @@
+html {
+	@include gridle(12);
+	@extend .no-paddings;
+	position: fixed;
+	height: 100%;
+	body {
+		.wrapper {
+			@extend html;
+			@include background-image(url('../img/Hydrogreen_pipe3.jpg'));  
+			background:{size:cover;}
+			.content-home {
+				@include gridle(5, desktopess); 
+				@include gridle(6, notebook-min); 
+				@include gridle_float(none);
+				@extend .text-center;
+				height: initial;
+				display: block;
+				padding: 50px 0;
+				margin:{top:14%;right:auto;bottom:0;left:auto;}
+				left: 0;
+				right: 0;
+				position: absolute;
+				.box-one {
+						@include gridle(12);
+						@include gridle_float(none);
+						@extend .no-paddings;
+						z-index: 2;
+						position: relative;
+						.logo {
+							@include gridle(8);
+							@include gridle_float(none);
+							@extend .no-paddings;
+							display: block;
+							margin: 0 auto;
+							svg {
+								width: 100%;
+								height: auto;
+							}
+						}
+					}
+				.box-two {
+					@include gridle(2);
+					@include gridle_float(none);
+					display: block;
+					margin:{top:20px;right:auto;bottom:0;left:auto;}
+					height: 3px;
+					background:{color:$color_font;}
+					z-index: 2;
+					position: relative;
+				}
+				.box-three {
+					@extend .box-one;
+					font:{family:$primary_font;}
+					color:$color_font;
+					h2 {
+						font:{family:$primary_font;size: 3em;}
+						color:$color_font;
+						margin:{top:20px;bottom:0;}
+					}
+					p {
+						font:{size: 13px;}
+						@extend .no-margins;
+						&.contacto {
+							text:{transform: uppercase;} 
+							color:#6e964b;
+							span {
+								font:{weight: 700;}
+							}
+						}
+					}
+					a {
+						@include gridle(3);
+						@include gridle_float(none);
+						background: none;
+						border:1px solid $color_font;
+						border-radius: 24px;
+						padding: 11px 0;
+						height: 40px;
+						margin: 10px 0 20px 0;
+						color: $color_font;
+						text-transform: uppercase;
+						overflow: hidden;
+						font:{size: 11px;}
+						&.btn {
+							cursor: pointer;
+							display: inline-block;
+							outline: none;
+							position: relative;
+							-webkit-transition: all 0.3s;
+							-moz-transition: all 0.3s;
+							transition: all 0.3s;
+							&:after {
+								content: '';
+								position: absolute;
+								z-index: -1;
+								-webkit-transition: all 0.3s;
+								-moz-transition: all 0.3s;
+								transition: all 0.3s;
+							}
+							&.btn-1 {
+								&:after {
+									width: 100%;
+									height: 0;
+									top: 0;
+									left: 0;
+									background:$color_font;
+								}
+								&:hover {
+									color: #fff;
+									&:after {
+										height: 100%;
+									}
+									&:active {
+										height: 100%;
+									}
+								}
+							}	
+						}
+					}	
+				}
+				.bg-home {
+					@include gridle(12);
+					height: inherit;
+					background: #fff;
+					padding: 50px 0;
+					opacity: 0.9;
+					position: absolute;
+					top: 0;
+					height: 100%;
+					left: 0;
+					z-index: 0;
+				}
+			}
+		}
+	}
+} 
