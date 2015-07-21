@@ -6,7 +6,7 @@ html {
 	body {
 		.wrapper {
 			@extend html;
-			@include background-image(url('../img/Hydrogreen_pipe3.jpg'));  
+			@include background-image(url('../img/hydrogreen_pipe3.jpg'));  
 			background:{size:cover;}
 			.content-home {
 				@include gridle(5, desktopess); 

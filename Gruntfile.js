@@ -127,9 +127,9 @@ module.exports = function(grunt) {
             files: [{
               expand: true,
               optimizationLevel: 3,                
-              cwd: '<%= dist %>/<%= compimg %>',
+              cwd: '<%= www %>/<%= compimg %>',
               src: ['<%= dist %>/<%= img %>'],
-              dest: '<%= dist %>/<%= compimg %>'
+              dest: '<%= www %>/<%= compimg %>'
             }]
           }
         },
