@@ -548,6 +548,18 @@ html, html body .wrapper {
       @media screen and (max-width: 1440px) {
         html body .wrapper .content-home {
           width: 50%; } }
+      @media screen and (max-width: 1024px) {
+        html body .wrapper .content-home {
+          width: 58.33333%; } }
+      @media screen and (max-width: 800px) {
+        html body .wrapper .content-home {
+          width: 75%; } }
+      @media screen and (max-width: 480px) {
+        html body .wrapper .content-home {
+          width: 91.66667%; } }
+      @media screen and (max-width: 480px) {
+        html body .wrapper .content-home {
+          padding: 55px 10px; } }
       html body .wrapper .content-home .box-one, html body .wrapper .content-home .box-three {
         float: left;
         direction: ltr;
@@ -594,6 +606,11 @@ html, html body .wrapper {
           color: #2c87ca;
           margin-top: 20px;
           margin-bottom: 0; }
+          @media screen and (max-width: 480px) {
+            html body .wrapper .content-home .box-three h2 {
+              font-size: 1.6em;
+              color: #2c87ca;
+              margin-top: 10px; } }
         html body .wrapper .content-home .box-three p {
           font-size: 13px; }
           html body .wrapper .content-home .box-three p.contacto {
@@ -606,7 +623,7 @@ html, html body .wrapper {
           direction: ltr;
           padding-left: 10px;
           padding-right: 10px;
-          width: 25%;
+          width: 33.33333%;
           float: none;
           background: none;
           border: 1px solid #2c87ca;
@@ -618,6 +635,9 @@ html, html body .wrapper {
           text-transform: uppercase;
           overflow: hidden;
           font-size: 11px; }
+          @media screen and (max-width: 480px) {
+            html body .wrapper .content-home .box-three a {
+              width: 83.33333%; } }
           html body .wrapper .content-home .box-three a.btn {
             cursor: pointer;
             display: inline-block;

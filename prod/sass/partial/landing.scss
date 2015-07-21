@@ -11,6 +11,9 @@ html {
 			.content-home {
 				@include gridle(5, desktopess); 
 				@include gridle(6, notebook-min); 
+				@include gridle(7, tabless-md);  
+				@include gridle(9, phoness);  
+				@include gridle(11, phoness-min);  
 				@include gridle_float(none);
 				@extend .text-center;
 				height: initial;
@@ -20,6 +23,9 @@ html {
 				left: 0;
 				right: 0;
 				position: absolute;
+				@include gridle_state(phoness-min) {
+					  padding: 55px 10px;
+				}
 				.box-one {
 						@include gridle(12);
 						@include gridle_float(none);
@@ -56,6 +62,11 @@ html {
 						font:{family:$primary_font;size: 3em;}
 						color:$color_font;
 						margin:{top:20px;bottom:0;}
+						@include gridle_state(phoness-min) {
+							font:{size: 1.6em;}
+							color: #2c87ca;
+							margin-top: 10px;
+						}
 					}
 					p {
 						font:{size: 13px;}
@@ -69,7 +80,8 @@ html {
 						}
 					}
 					a {
-						@include gridle(3);
+						@include gridle(4);
+						@include gridle(10, phoness-min);
 						@include gridle_float(none);
 						background: none;
 						border:1px solid $color_font;
